@@ -1,0 +1,168 @@
+body{
+  background-color: #E7F6FF;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+*{
+  font-family: 'Inter', sans-serif;
+}
+
+h4{
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  min-width: 150px;
+}
+
+
+.wrapper{
+background: #FFFFFF;
+box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+border-radius: 20px;
+max-width: 1080px;
+margin:85px auto;
+
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.drawer{
+  width: 420px;
+  height: 100%;
+  right: 0;
+  background: #fff;
+  opacity: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+
+  .cartItem{
+    border-radius: 20px;
+    border: 1px solid #F3F3F3;
+    padding: 15px 20px;
+    align-items: center;
+    // overflow: auto;
+    margin-bottom: 40px;
+
+    h4{
+      margin-bottom: 8px;
+    }
+    b{
+      font-size: 14px;
+    }
+    .deletegoods{
+      margin-left: 12px;
+      cursor: pointer;
+    }
+
+    .cartEmpty{
+      flex: 1;
+    }
+  }
+  .btnCart{
+    position: relative;
+    width: 100%;
+    height: 55px;
+    border-radius: 18px;
+    background: #9DD458;
+    border: 0;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+
+    &:disabled {
+      animation: button-loading 0.6s ease-in-out infinite;
+    }
+
+    &:disabled {
+      background: #bebebe;
+      cursor: default;
+    }
+
+    img{
+      position: absolute;
+      right: 40px;
+      top: 20px;
+      transition: all ease-in-out 0.2s;
+    }
+
+    &:hover{
+    background: lighten(#9DD458, 5%);
+    img{
+      right: 35px;
+    }
+    }
+
+    &:active{
+      background: darken(#9DD458, 5%);
+      }
+  }
+}
+
+@keyframes button-loading {
+0% {
+  opacity: 1;
+}  
+50% {
+  opacity: 0.7;
+}
+100% {
+  opacity: 1;
+}
+}
+
+header{
+  border-bottom: solid 1px #EAEAEA;
+  h3{
+    margin: 0;
+  }
+  p{
+    margin: 0;
+  }
+  ul{
+    li{
+      margin-right: 30px;
+    }
+  }
+}
+
+.content{
+  .searchBlock{
+    border-radius: 10px;
+    border: 1px solid #F3F3F3;
+    width: 250px;
+    height: 45px;
+    align-items: center;
+    display: flex;
+    padding: 15px 18px;
+    position: relative;
+
+    img{
+      margin-right: 20px;
+    }
+
+    input{
+      border: 0;
+      font-size: 16px;
+    }
+    .clean{
+      position: absolute;
+      right: -10px;
+    }
+  }
+  h1{
+    margin: 0;
+    padding: 0;
+  }
+}
+}
